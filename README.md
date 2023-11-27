@@ -1,11 +1,10 @@
-# Discord Invite EndPoint
-
+# Discord Decode Method
 First you need to clone this repo from the command or download the zip package.
 ```git
 git clone https://github.com/soizx/DecodeValue
 ```
 
-Then you need to open the ` script.js ` file and write the flags that u want to have.
+Then you need to open the ` script.js ` file and write the perms that u want to have.
 ```js
 const Intents = {
     WEB_HOOK: 1,
@@ -16,19 +15,19 @@ const Intents = {
     SEND_MESSAGE: 32,
 };
 ```
-For make your flags you have to type first the name of the flag and then the number
+For make your perm you have to type first the name of the perm and then the number
 ```js
 const Intents = {  
-    EXAMPLE_FLAG: [1, 2, 4, 8, 16, 32, 64, 128]
+    EXAMPLE_PERM: [1, 2, 4, 8, 16, 32, 64, 128]
 };
 ```
-This code defines a set of intents using a JavaScript object. Each intent is assigned a numerical value that is a power of 2. The decodeIntents function takes an integer representing a combination of these intents and decodes it into an array of corresponding intent names in uppercase. If the input value is 0 or null, it returns a default value.
+This code defines a set of permission using a JavaScript object. Each permission is assigned a numerical value that is a power of 2. The decodeIntents function takes an integer representing a combination of these permissions and decodes it into an array of corresponding permission names in uppercase. If the input value is 0 or null, it returns a default value.
 
 
 # How to use the EndPoint
-You need to open your browser or your testing tool ` Postman ` and copy paste this url and replace the ` serverID ` and ` Intents ` with values that you want.
+You need to open your browser or your testing tool ` Postman ` and copy paste this url and replace the ` serverID ` and ` permissions ` with values that you want. Defualt ` scope ` in discord is bot for make a Discord Bot.
 ```
-http://localhost:3000/invite/:serverID?intents=8
+http://localhost:3000/invite/5892?permissions=8&scope=bot
 ```
 This will return you the server id info and the intents.
 Intents work by adding the numbers of the flags.
