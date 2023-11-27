@@ -1,4 +1,4 @@
-const Intents = {
+const Permissions = {
     WEB_HOOK: 1,
     ADMINISTRATOR: 2,
     READ_EVENTS: 4,
@@ -7,15 +7,15 @@ const Intents = {
     SEND_MESSAGE: 32,
 };
 
-function decodeIntents(intentValue) {
-    if (intentValue == 0 || intentValue == null) return { intents: "DEFAULT"}
-    const decodedIntents = Object.keys(Intents)
-        .filter(intent => (intentValue & Intents[intent]) !== 0)
-        .map(intent => intent.toUpperCase());
+function decodePermissions(permissionValue) {
+    if (permissionValue == 0 || permissionValue == null) return { permissions: "DEFAULT"};
+    const decodedPermissions = Object.keys(Permissions)
+        .filter(permission => (permissionValue & Permissions[permission]) !== 0)
+        .map(permission => permission.toUpperCase());
 
-    return { intents: decodedIntents.join(', ') };
+    return { permissions: decodedPermissions.join(', ') };
 }
 
 module.exports = {
-    decodeIntents,
+    decodePermissions,
 };
