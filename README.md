@@ -25,9 +25,14 @@ This code defines a set of permission using a JavaScript object. Each permission
 
 
 # How to use the EndPoint
-You need to open your browser or your testing tool ` Postman ` and copy paste this url and replace the ` serverID ` and ` permissions ` with values that you want. Defualt ` scope ` in discord is bot for make a Discord Bot.
+You need to open your browser or your testing tool ` Postman ` and copy paste this url and replace the ` botID ` and ` permissions ` with values that you want. Defualt ` scope ` in discord is bot for make a Discord Bot.
 ```
-http://localhost:3000/invite/5892?permissions=8&scope=bot
+http://localhost:3000/invite/[botID]?permissions=[permissions]&scope=[scope]
+```
+```java
+botID=5892
+permissions=8
+scope="bot"
 ```
 This will return you the server id info and the intents.
 Intents work by adding the numbers of the flags.
