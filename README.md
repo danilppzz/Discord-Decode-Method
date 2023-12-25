@@ -1,7 +1,7 @@
 # Discord Decode Method
 First you need to clone this repo from the command or download the zip package.
 ```git
-git clone https://github.com/soizx/DecodeValue
+git clone https://github.com/danilppzz/DecodeValue
 ```
 Then you need to open the ` script.js ` file and write the perms that u want to have.
 ```js
